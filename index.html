@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <script src="/Js/bootstrap.min.js"></script>
+    <script src="/Js/main.js" defer></script>
+    <title>Front Editor</title>
+    <style id="cssInsertion"></style>
+</head>
+
+<body>
+    <h1 class="titre_page mt-3">- / - Zéro-Dév - Front End Editor - / -</h1>
+
+    <div class="editeur container-fluid ">
+
+        <div class="row">
+
+            <!-- HTML Zone -->
+
+            <div class="html_zone col-4">
+
+                <h2>HTML</h2>
+
+
+                <div class="progress" id="progress_bar_html">
+
+                </div>
+
+                <div class="htmlcount mt-3">
+                    <label for="htmlCharNbr">Nombre de caractères : <span id="compteurhtml">0</span> / </label>
+
+                    <select name="characters" id="htmlCharNbr">
+                        <option value="200">200</option>
+                        <option value="400">400</option>
+                        <option value="600">600</option>
+                        <option value="800">800</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="htmlTextarea" class="form-label mt-3">Saisie HTML</label>
+                    <textarea class="form-control" id="htmlTextarea" rows="8"></textarea>
+                </div>
+
+
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-secondary" type="button" onClick="addTagDiv(); return false;">div</button>
+                    <button class="btn btn-secondary" type="button" onClick="addTagP(); return false;">p</button>
+                    <button class="btn btn-secondary" type="button" onClick="addTagH1(); return false;">h1</button>
+                    <button class="btn btn-secondary" type="button" onClick="addTagH2(); return false;">h2</button>
+                    <button class="btn btn-secondary" type="button" onClick="addTagA(); return false;">a</button>
+
+                </div>
+
+
+            </div>
+
+            <!-- CSS Zone -->
+
+            <div class="css_zone col-4">
+
+                <h2>CSS</h2>
+
+                <div class="progress" id="progress_bar_css">
+
+                </div>
+
+                <div class="csscount mt-3">
+
+                    <label for="cssCharNbr">Nombre de caractères : <span id="compteurcss">0</span> / </label>
+
+                    <select name="characters" id="cssCharNbr">
+                        <option value="200">200</option>
+                        <option value="400">400</option>
+                        <option value="600">600</option>
+                        <option value="800">800</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cssTextarea" class="form-label mt-3">Saisie CSS</label>
+                    <textarea class="form-control" id="cssTextarea" rows="8"></textarea>
+                </div>
+
+                <div>
+                    <input type="color" id="inputColor" name="inputColor" value="#e66465">
+                    <label for="inputColor">Choose you color</label>
+                </div>
+
+
+            </div>
+
+            <!-- Javascript zone -->
+
+            <div class="css_zone col-4">
+
+                <h2>JavaScript</h2>
+
+                <div class="progress" id="progress_bar_js">
+
+                </div>
+
+                <div class="jscount mt-3">
+                    <label for="jsCharNbr">Nombre de caractères : <span id="compteurjs">0</span> / </label>
+
+                    <select name="characters" id="jsCharNbr">
+                        <option value="200">200</option>
+                        <option value="400">400</option>
+                        <option value="600">600</option>
+                        <option value="800">800</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="jsTextarea" class="form-label mt-3">Saisie du code JS</label>
+                    <textarea class="form-control" id="jsTextarea" rows="8"></textarea>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4 p-4 border border-secondary border-3 h-100 " id="preview">
+
+    </div>
+
+</body>
+
+</html>
